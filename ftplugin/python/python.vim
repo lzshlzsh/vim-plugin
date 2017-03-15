@@ -8,7 +8,8 @@ function! lzs#py_add_header()
     normal G
     normal o
     normal o
-endf
+endfunction
 
 if g:lzs#use_python_plugin
 	noremap <LocalLeader>cfdh :call lzs#py_add_header()<CR>
+endif
