@@ -8,6 +8,16 @@ function! Py_add_header() abort
     call append(4, "#copyright Copyright 1998 - 2017 Tencent. All Rights Reserved.")
 endfunction
 
+function! Py_comment_function() abort
+  let pos1  = line(".")
+  call append(pos1+0, "    \"\"\"")
+  call append(pos1+1, "        Funtion:")
+  call append(pos1+2, "        Args:")
+  call append(pos1+3, "        Returns:")
+  call append(pos1+4, "    \"\"\"")
+endfunction
+
 if g:lzs#use_python_plugin
 	noremap <LocalLeader>cfdh :call Py_add_header()<CR>
+	noremap <LocalLeader>cfu :call Py_comment_function()<CR>
 endif
