@@ -4,8 +4,6 @@ function! Py_add_header() abort
     call append(0, "#!/usr/bin/env python3")
     call append(1, "#-*- coding: utf-8 -*-")
     call append(2, "#date " . strftime('%Y-%m-%d %T', localtime()))
-    #call append(3, "#author lzshlzsh,lzshlzsh@tencent.com")
-    #call append(4, "#copyright Copyright 1998 - 2021 Tencent. All Rights Reserved.")
 endfunction
 
 function! Py_comment_function() abort
